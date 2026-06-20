@@ -14,7 +14,7 @@ class Calculator:
         self.precedence: dict[str, int] = {
             "+": 1,
             "-": 1,
-            "*": 2,
+            "\*": 2,
             "/": 2,
         }
 
