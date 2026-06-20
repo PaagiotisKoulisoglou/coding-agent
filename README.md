@@ -68,7 +68,13 @@ uv run main.py "your prompt here" --verbose
 1. Your prompt is sent to Gemini along with a list of available tools.
 2. The model decides which tool (if any) to call, and with what arguments.
 3. The agent runs that tool for real and feeds the result back to the model.
-4. This repeats — up to 20 times — until the model has a final answer instead of another tool call.
+4. This repeats — up to 20 times — until the model has a final answer instead of another tool
+
+
 ## ⚠️ Safety note
- 
-This project is for learning purposes only. It allows an LLM to run arbitrary Python code and write files. Only use it on throwaway projects in a sandboxed directory, and never share it for others to run.
+
+This is a learning project, not production software. The agent can execute arbitrary Python code and overwrite files with no undo and minimal safeguards. If you run this yourself:
+
+- Only point it at a disposable/sandboxed directory (never your real projects or system files).
+- Don't run it with elevated permissions.
+- Treat any code or file changes it makes as untrusted until you've reviewed them.
